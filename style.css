@@ -4,7 +4,9 @@ body{
     font-family: Lora, serif;
 
 }
-
+*{
+    box-sizing: border-box;
+}
 
 /* Just navbar stuff */
 .main-nav{
@@ -12,6 +14,7 @@ body{
     list-style: none;
     font-size: 1.1em; 
     background-color: #333;
+    /* background-image: linear-gradient(#333644, #161618); */
     margin: 0;
     align-items: center;
     justify-content: flex-end;
@@ -28,6 +31,7 @@ body{
 
 .main-nav a{
     color: #248de1;
+    /* color: whitesmoke; */
 }
 a:hover{
     text-decoration: none;
@@ -74,8 +78,117 @@ a:hover{
       float: none;
       display: block;
       text-align: left;
+      /* background-color: rgba(0,0, 0, 0.5); */
     }
     .main-nav{
         padding: 0;
     }
   }
+
+  /* header CSS */
+  .header{
+      /* background: rgba(33, 38, 59, 0.678); */
+      background:  #333;
+      text-align: center;
+      padding: 80px;
+      color: #ddd ;
+  }
+  .header h1{
+    font-family: Ubuntu, serif;
+    font-size: 40px;
+
+  }
+
+  @media screen and (min-width:1030px){
+    .svg-wrapper {
+        height: 300px;
+        margin: 0, auto;
+        position: relative;
+      }
+      
+       .shape {
+        fill: transparent;
+        stroke-dasharray: 820 9000;
+        stroke-dashoffset: -1000;
+        stroke-width: 8px;
+        stroke: #19f6e8; 
+      }
+      .text {
+        color: #fff;
+        font-family: 'Roboto Condensed';
+        font-size: 22px;
+        letter-spacing: 8px;
+        line-height: 32px;
+        position: relative;
+        top: -80px;
+      }
+      
+      @keyframes draw {
+        0% {
+          stroke-dasharray:820 9000;
+          stroke-dashoffset: -474;
+          stroke-width: 8px;
+        }
+        100% {
+          stroke-dasharray: 2000;
+          stroke-dashoffset: 0;
+          stroke-width: 2px;
+        }
+      }
+      
+      .svg-wrapper:hover .shape {
+        -webkit-animation: 0.5s draw linear forwards;
+        animation: 0.5s draw linear forwards;
+      }
+  }
+  @media screen and (max-width:1030px){
+      .svg-wrapper svg{
+          display: none;
+      }
+  }
+
+
+/* About section */
+.about{
+    display: grid;
+    background: rgba(223, 47, 47, 0.61);
+    /* grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); */
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 60px 300px;
+    grid-gap: 5px;
+    
+    
+}
+
+.about>h1{
+    font-family: Ubuntu, sans-serif;
+    grid-column: span 12;
+    color: rgb(26, 25, 25);
+    /* width: 100vw; */
+    text-align: center;
+}
+
+.about .myimage{
+    /* border-radius: 5000px; */
+    overflow: hidden;
+    margin-left: auto;
+    width: 100%;
+    padding-right: 40px;
+    grid-column:span 4;
+    min-width: 250px;
+}
+.about .bio{
+    color: rgb(27, 26, 26);
+    font-family: lora,serif;
+    font-size: 1.1em;
+    grid-column: span 8;
+}
+
+@media screen and (max-width:480px){
+    .about .myimage{
+        grid-column: span 12;
+    }
+    .about .bio{
+        grid-column: span 12;
+    }
+}

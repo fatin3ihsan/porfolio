@@ -1,11 +1,12 @@
-function myFunction() {
+let burger= document.getElementById("burger");
+burger.addEventListener("click",function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "main-nav") {
       x.className += " responsive";
     } else {
       x.className = "main-nav";
     }
-  }
+  })
 
 const logo = document.getElementsByClassName("logo")[0];
 
