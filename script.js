@@ -7,7 +7,7 @@ function myFunction() {
     }
   }
 
-const logo = document.querySelector("li");
+const logo = document.getElementsByClassName("logo")[0];
 
 logo.addEventListener("mouseenter",function(){
     logo.classList.add ("animate__animated" ,"animate__rubberBand");

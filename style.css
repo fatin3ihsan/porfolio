@@ -5,6 +5,8 @@ body{
 
 }
 
+
+/* Just navbar stuff */
 .main-nav{
     display: flex;
     list-style: none;
@@ -15,12 +17,10 @@ body{
     justify-content: flex-end;
     height: 54px;
     font-family: Ubuntu, sans-serif;
-    overflow: hidden;
 
 }
 
 .main-nav li{
-    text-decoration: none;
     list-style-type: none;
     padding: 15px;
 
@@ -39,7 +39,7 @@ a:hover{
     width: 50px;
     height: 40px;
     padding: 0;
-    margin: 0;
+    margin: 7px;
 }
 
 .buffer{
@@ -61,15 +61,21 @@ a:hover{
 }
 
 @media screen and (max-width: 600px) {
-    .main-nav.responsive {position: relative;}
+    .main-nav.responsive {
+        position: relative;
+        display: block;
+    }
     .main-nav.responsive a.icon {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 15px;
+      top: 15px;
     }
-    .main-nav.responsive a {
+    .main-nav.responsive .item{
       float: none;
       display: block;
       text-align: left;
+    }
+    .main-nav{
+        padding: 0;
     }
   }
